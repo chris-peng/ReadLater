@@ -148,7 +148,7 @@ function createLaterReadMenu(items) {
   mainButton.style.borderRadius = '50%';
   mainButton.style.backgroundColor = 'white';
   mainButton.style.display = 'flex';
-  mainButton.style.opacity = '0.2';
+  mainButton.style.opacity = '0.5';
   mainButton.style.alignItems = 'center';
   mainButton.style.justifyContent = 'center';
   // mainButton.style.cursor = 'pointer';
@@ -164,7 +164,7 @@ function createLaterReadMenu(items) {
   });
   
   mainButton.addEventListener('mouseleave', () => {
-	mainButton.style.opacity = '0.3';
+	mainButton.style.opacity = '0.5';
     // 检查鼠标是否不在关闭按钮上
     if (!closeBtn.matches(':hover')) {
       closeBtn.style.opacity = '0';
