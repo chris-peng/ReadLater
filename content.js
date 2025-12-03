@@ -87,7 +87,7 @@ function createLaterReadMenu(items) {
   menuContainer.id = 'later-read-menu';
   menuContainer.style.position = 'fixed';
   menuContainer.style.bottom = '20px';
-  menuContainer.style.right = '20px';
+  menuContainer.style.left = '80px';
   menuContainer.style.zIndex = '999999';
   menuContainer.style.display = 'block'; // 改为block布局，避免flex影响位置
   
@@ -148,6 +148,7 @@ function createLaterReadMenu(items) {
   mainButton.style.borderRadius = '50%';
   mainButton.style.backgroundColor = 'white';
   mainButton.style.display = 'flex';
+  mainButton.style.opacity = '0.2';
   mainButton.style.alignItems = 'center';
   mainButton.style.justifyContent = 'center';
   // mainButton.style.cursor = 'pointer';
@@ -157,11 +158,13 @@ function createLaterReadMenu(items) {
   
   // 添加主按钮悬停效果，显示关闭按钮
   mainButton.addEventListener('mouseenter', () => {
+	mainButton.style.opacity = '1';
     closeBtn.style.opacity = '1';
     closeBtn.style.transform = 'scale(1)';
   });
   
   mainButton.addEventListener('mouseleave', () => {
+	mainButton.style.opacity = '0.3';
     // 检查鼠标是否不在关闭按钮上
     if (!closeBtn.matches(':hover')) {
       closeBtn.style.opacity = '0';
@@ -466,7 +469,7 @@ function showItemTooltip(element, item) {
   tooltip.style.borderRadius = '8px';
   tooltip.style.boxShadow = '0 4px 16px rgba(0,0,0,0.15)';
   tooltip.style.padding = '12px';
-  tooltip.style.maxWidth = '300px';
+  tooltip.style.maxWidth = '400px';
   tooltip.style.zIndex = '1000000';
   tooltip.style.fontFamily = 'Arial, sans-serif';
   tooltip.style.opacity = '0';
